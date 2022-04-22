@@ -1,0 +1,253 @@
+.lateral-menu{
+    width: 30%;
+    max-width: 418px;
+    min-width: 400px;
+
+    min-height: 100%;
+
+    background-color: white;
+
+    transition: 1s;
+}
+
+.user-info{
+    width: 100%;
+    height: 59px;
+
+    display: flex;
+    flex-direction: row;
+    
+    padding: 0 10px;
+
+    background-color: #d1d1d1;
+}
+
+.user-info-photo{
+    width: 50%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.user-info-options{
+    width: 50%;
+    display: flex;
+    gap: 28px;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user-info-options > svg:hover{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(146, 146, 146, 0.322);
+}
+
+.desktop{
+    width: 100%;
+    height: 89px;
+
+    background-color: #808080;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+
+    color: #fff;
+}
+
+.search-contact{
+    width: 100%;
+    height: 50px;
+
+    background-color: rgb(255, 255, 255);
+    padding: 7px;
+
+    border-bottom: 1px solid #808080;
+}
+
+.searchContent{
+    width: 100%;
+    height: 100%;
+
+    padding: 5px 15px;
+
+    border-radius: 20px;
+
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+
+    background-color: #d1d1d1;
+
+    gap: 15px;
+}
+
+.searchContent > svg {
+    position: absolute;
+    left: 10px;
+    padding: 1px;
+
+}
+
+.searchContent > input{
+    width: 100%;
+    background-color: #d1d1d100;
+    border: none;
+    height: 100%;
+    padding-left: 35px;
+    padding-right: 5px;
+}
+
+.contacts-list{
+    width: 100%;
+    max-height: calc(100% - 198px);
+    
+
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+.iconSVGStart{
+    opacity: 1;
+    transform: rotate(90deg);
+    transition: 0.7s;
+}
+
+.iconSVGEnd{
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: 0.7s;
+}
+
+.mobileInfo{
+    display: none;
+}
+
+.menuMobile{
+    display: none;
+}
+
+.contact-list-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 749px) {
+
+    .lateral-menu{
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .user-info, .desktop{display: none;}
+
+    .contacts-list{
+        min-height: none;
+        height: calc(100% - 90px);
+        max-height: calc(100% - 90px);
+        width: 100%;
+    }
+
+    .search-contact{
+        display: none;
+        font-size: 18px;
+    }
+
+    .mobileInfo{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        height: 40px;
+        align-items: center;
+        background-color: #fff;
+        color: rgb(0, 0, 0);
+    }
+
+    .activeMobileInfo{
+        background-color: #222;
+        color: rgb(255, 255, 255);
+        transition: 0.5s;
+    }
+
+    .chatsMobileText{
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .activeChatsMobileText{
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .contact-list-mobile{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .contact-list-mobile > div > input{
+        height: 25px;
+        font-size: 16px;
+    }
+
+    .contact-list-mobile > div > input::placeholder{
+        font-size: 16px;
+    }
+
+    .menuMobile{
+        display: block;
+
+        width: 100%;
+        height: 60px;
+
+        position: absolute;
+        bottom: 0;
+        padding: 0 20px;
+
+        background-color: #222;
+        color: #fff;
+    }
+
+    .menuMobile > ul{
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menuMobile > ul > li{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .menuMobile > ul > li > svg{
+        width: 26px;
+        height: 26px;
+    }
+
+    .menuMobile > ul > li > i{
+        font-size: 24px;
+    }
+
+    .menuMobile > ul > li > span{
+        font-size: 11px;
+    }
+
+}

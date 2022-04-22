@@ -1,0 +1,25 @@
+.main-container{
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100%;
+    max-height: 100%;
+
+    display: flex;
+
+    background-color: #fff;
+
+    transition: 1s;
+}
+
+@media screen and (max-width: 749px) {
+    .main-container{
+        width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+    
+        display: flex;
+    
+        background-color: #fff;
+    }
+}
